@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     char chs[4];
+    int cnt;
     // while (rio_readn(0, &c, 4) > 0) {
     //     rio_written(1, &c, 2);
     // }
