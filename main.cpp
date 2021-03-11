@@ -35,6 +35,7 @@ int main(int argc, char* argv[]) {
     while (1) {
         clientlen = sizeof(clientaddr);
         connfd = accept(listenfd, (sockaddr*)&clientaddr, &clientlen);
+        sbuf_insert(&sbuf, connfd);
         getnameinfo((sockaddr*)&clientaddr, clientlen, hostname, MAXLINE, port, MAXLINE, 0);
         printf("Accepted connection from (%s, %s)\n", hostname, port);
     }
